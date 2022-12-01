@@ -1,0 +1,30 @@
+//Name Ankit Kumar Mishra
+//Roll 2100290120030
+//Program to insert an element in an array at a position
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int n,i,pos,temp,num;
+    scanf("%d",&n);
+    int ar[n+1];
+    for(i=0;i<n;i++)
+     scanf("%d",&ar[i]);
+     printf("\nArray is \n");
+     for(i=0;i<n;i++)
+     printf("%d  ",ar[i]);
+     printf("\nEnter the position at which you want to insert an element \n");
+     scanf("%d",&pos);
+     printf("\nEnte the element you want to insert\n");
+     scanf("%d",&num);
+     
+     for(i=n-1;i>=pos-1;i--) //shif elements forward 
+     ar[i+1]=ar[i];
+     ar[pos-1]=num;
+     printf("\nThe new array is\n");
+     for(i=0;i<n+1;i++)
+     printf("%d  ",ar[i]);
+     
+     return 0;
+    
+}
